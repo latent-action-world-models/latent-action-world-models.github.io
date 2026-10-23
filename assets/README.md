@@ -1,25 +1,25 @@
-# 网站素材
+# Website Assets
 
-所有运行资源均保存在本地。此说明文件不进入导出包。
+All runtime assets are stored locally. This documentation file is excluded from the website export.
 
-| 目录 | 内容与来源 |
+| Directory | Contents and Sources |
 | --- | --- |
-| `figures/` | 来自提供的论文资料；同名 WebP 用于页面展示，PNG 用于放大查看和下载。 |
-| `examples/ssv2/`、`examples/ego4d/` | 从论文 Figure 3 裁出的实验帧，每个数据集 5 组，每组 5 帧。 |
-| `documents/paper.pdf` | 原始论文 PDF 的逐字节副本。 |
-| `documents/poster.png` | 用户提供的 `A Universal World Model .png` 的逐字节副本。 |
-| `icons/uwm-icon-transparent.png` | 用户提供的 globe 图标的透明背景版本，用于导航栏和 touch icon。 |
-| `icons/uwm-favicon-16.png`、`icons/uwm-favicon-32.png` | Chromium 从透明图标渲染出的 16px/32px 位图；根目录 `favicon.ico` 包含这两帧。 |
-| `fonts/` | 从本地 PILOT 参考项目复制的 Noto Sans Latin 字体与 SIL Open Font License。 |
+| `figures/` | Figures from the supplied paper materials. Matching WebP files are displayed on the page; PNG originals are used for enlarged viewing and downloads. |
+| `examples/ssv2/`, `examples/ego4d/` | Cropped frames from Figure 3, with five examples per dataset and five frames per example. |
+| `documents/paper.pdf` | A byte-for-byte copy of the original manuscript PDF. |
+| `documents/poster.png` | A byte-for-byte copy of the supplied `A Universal World Model .png`. |
+| `icons/uwm-icon-transparent.png` | A transparent-background version of the supplied globe icon, used in the navigation and as the touch icon. |
+| `icons/uwm-favicon-16.png`, `icons/uwm-favicon-32.png` | 16px/32px bitmaps rendered by Chromium from the transparent icon. The root `favicon.ico` contains both frames. |
+| `fonts/` | Noto Sans Latin and its SIL Open Font License, copied from the local PILOT reference project. |
 
-实验帧命名为 `{1..5}-{帧类型}.webp`，按以下顺序展示：
+Example frames are named `{1..5}-{frame-type}.webp` and displayed in this order:
 
-1. `observation`：当前观测。
-2. `reconstruction`：当前观测的重建。
-3. `next-observation`：下一帧观测。
-4. `next-reconstruction`：下一帧观测的重建。
-5. `prediction`：世界模型预测。
+1. `observation`: current observation.
+2. `reconstruction`: reconstruction of the current observation.
+3. `next-observation`: next observation.
+4. `next-reconstruction`: reconstruction of the next observation.
+5. `prediction`: world model prediction.
 
-Ego4D 文件编号仍为 1–5，页面显示其对应的论文样例编号 6–10。LPIPS 数值保存在 `main.js` 的 `DATASETS` 中，与论文 Table 1 一致。
+Ego4D files retain example numbers 1–5; the page displays their corresponding paper example numbers 6–10. LPIPS values are stored in `DATASETS` in `main.js` and match Table 1 in the paper.
 
-原始图标、海报和论文资料保存在 `local/inputs/`。图标去背景的生成记录保存在 `local/inputs/icon-background-removal.md`；旧 SVG 图标、带灰底图标和未使用的字体保存在 `local/unused-assets/`，不随网站发布。
+Original icons, the poster, and paper materials are retained in `local/inputs/`. The icon background-removal record is in `local/inputs/icon-background-removal.md`. The old SVG icon, icon with a gray background, and unused fonts are archived in `local/unused-assets/` and excluded from the published website.
