@@ -1,0 +1,14 @@
+build/
+qa/
+reference/
+local/
+project-site/
+*.zip
+*.tar.gz
+13_A_Universal_World_Model_Lea*.pdf
+__pycache__/
+.agents/
+.aws/
+.codex/
+/image.png
+/A Universal World Model .png
