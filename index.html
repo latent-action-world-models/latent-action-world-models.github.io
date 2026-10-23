@@ -10,14 +10,14 @@
   <meta content="Learn from diverse videos. Adapt to new environments. A research project by Hanchen Cui and Yang Gao." property="og:description">
   <meta content="website" property="og:type">
   <meta content="https://universal-world-model-cui.lunarshore4096.chatgpt.site/" property="og:url">
-  <meta content="https://universal-world-model-cui.lunarshore4096.chatgpt.site/assets/concept.png" property="og:image">
+  <meta content="https://universal-world-model-cui.lunarshore4096.chatgpt.site/assets/figures/concept.png" property="og:image">
   <title>
    UWM &middot; A Universal World Model
   </title>
   <link href="favicon.ico?v=2" rel="icon" sizes="16x16 32x32" type="image/x-icon">
-  <link href="assets/uwm-favicon-32.png" rel="icon" sizes="32x32" type="image/png">
-  <link href="assets/uwm-favicon-16.png" rel="icon" sizes="16x16" type="image/png">
-  <link href="assets/uwm-icon-transparent.png" rel="apple-touch-icon">
+  <link href="assets/icons/uwm-favicon-32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="assets/icons/uwm-favicon-16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="assets/icons/uwm-icon-transparent.png" rel="apple-touch-icon">
   <link href="assets/style.css" rel="stylesheet">
   <script defer src="assets/main.js">
   </script>
@@ -25,10 +25,6 @@
  </head>
  <body>
   <svg aria-hidden="true" class="svg-defs" xmlns="http://www.w3.org/2000/svg">
-   <symbol id="i-arrow" viewbox="0 0 24 24">
-    <path d="M5 12h14m-6-6 6 6-6 6">
-    </path>
-   </symbol>
    <symbol id="i-diag" viewbox="0 0 24 24">
     <path d="M6 18 18 6M6 6h12v12">
     </path>
@@ -68,7 +64,7 @@
   <header class="site-header">
    <nav aria-label="Main navigation" class="nav container">
     <a aria-label="Universal World Model home" class="brand" href="#">
-     <img alt="UWM project icon" class="brand-icon" height="1254" src="assets/uwm-icon-transparent.png" width="1254">
+     <img alt="UWM project icon" class="brand-icon" height="1254" src="assets/icons/uwm-icon-transparent.png" width="1254">
      UWM
     </a>
     <div class="nav-links">
@@ -88,7 +84,7 @@
       BibTeX
      </a>
     </div>
-    <a class="nav-paper" href="assets/paper.pdf" rel="noopener" target="_blank">
+    <a class="nav-paper" href="assets/documents/paper.pdf" rel="noopener" target="_blank">
      Paper
      <svg class="icon">
       <use href="#i-diag">
@@ -139,7 +135,7 @@
       </span>
      </p>
      <div class="hero-actions">
-      <a class="button primary" href="assets/paper.pdf" rel="noopener" target="_blank">
+      <a class="button primary" href="assets/documents/paper.pdf" rel="noopener" target="_blank">
        <svg class="icon">
         <use href="#i-paper">
         </use>
@@ -157,7 +153,7 @@
         Code
        </span>
       </a>
-      <a class="button secondary" href="assets/uwm-poster.png" rel="noopener" target="_blank">
+      <a class="button secondary" href="assets/documents/poster.png" rel="noopener" target="_blank">
        <svg aria-hidden="true" class="icon">
         <use href="#i-poster">
         </use>
@@ -234,8 +230,8 @@
      </p>
     </div>
     <figure class="overview-figure">
-     <a aria-label="Enlarge the universal world model overview" class="figure-link" data-caption="Pretrain on diverse, action-free videos. Adapt with a small amount of in-domain data." data-lightbox href="assets/concept.png">
-      <img alt="In-the-wild video data trains a universal world model. In-domain robot data adapts it to a specific world model, connected to an agent." fetchpriority="high" height="857" src="assets/concept.webp" width="2436">
+     <a aria-label="Enlarge the universal world model overview" class="figure-link" data-caption="Pretrain on diverse, action-free videos. Adapt with a small amount of in-domain data." data-lightbox href="assets/figures/concept.png">
+      <img alt="In-the-wild video data trains a universal world model. In-domain robot data adapts it to a specific world model, connected to an agent." fetchpriority="high" height="857" src="assets/figures/concept.webp" width="2436">
       <span class="expand-hint">
        <svg class="icon">
         <use href="#i-expand">
@@ -324,8 +320,8 @@
      </p>
     </div>
     <figure class="paper-figure method-full-figure">
-     <a aria-label="Enlarge the Universal World Model framework" class="figure-link" data-caption="Full architecture: pretraining from adjacent video frames above, action-conditioned adaptation below." data-lightbox href="assets/framework.png">
-      <img alt="Top: adjacent video frames are encoded and passed through an action extractor, discrete codebook, and dynamics model. Bottom: an action adapter maps environment actions into the same latent action space." height="1257" loading="lazy" src="assets/framework.webp" width="2203">
+     <a aria-label="Enlarge the Universal World Model framework" class="figure-link" data-caption="Full architecture: pretraining from adjacent video frames above, action-conditioned adaptation below." data-lightbox href="assets/figures/framework.png">
+      <img alt="Top: adjacent video frames are encoded and passed through an action extractor, discrete codebook, and dynamics model. Bottom: an action adapter maps environment actions into the same latent action space." height="1257" loading="lazy" src="assets/figures/framework.webp" width="2203">
       <span class="expand-hint">
        <svg class="icon">
         <use href="#i-expand">
@@ -399,8 +395,8 @@
      </p>
     </div>
     <figure class="paper-figure video-results-figure">
-     <a aria-label="Enlarge all ten in-the-wild prediction examples" class="figure-link" data-caption="All ten in-the-wild examples from Figure 3. Ot and Ot+1 are observations; Rt and Rt+1 are reconstructions; Predict is the model prediction." data-lightbox href="assets/ssv2_ego4d.png">
-      <img alt="Five Something-Something-v2 examples and five Ego4D examples, each showing two observations, their reconstructions, and the predicted next frame." height="722" loading="lazy" src="assets/ssv2_ego4d.webp" width="1160">
+     <a aria-label="Enlarge all ten in-the-wild prediction examples" class="figure-link" data-caption="All ten in-the-wild examples from Figure 3. Ot and Ot+1 are observations; Rt and Rt+1 are reconstructions; Predict is the model prediction." data-lightbox href="assets/figures/ssv2_ego4d.png">
+      <img alt="Five Something-Something-v2 examples and five Ego4D examples, each showing two observations, their reconstructions, and the predicted next frame." height="722" loading="lazy" src="assets/figures/ssv2_ego4d.webp" width="1160">
       <span class="expand-hint">
        <svg class="icon">
         <use href="#i-expand">
@@ -447,7 +443,7 @@
        <div aria-label="Prediction frames; scroll horizontally on small screens" class="prediction-scroll" role="region" tabindex="0">
         <div aria-atomic="true" aria-live="polite" class="prediction-grid" id="prediction-grid">
          <figure>
-          <img alt="Current observed frame, SSv2 example 1" height="104" src="assets/ssv2-1-0.webp" width="104">
+          <img alt="Current observed frame, SSv2 example 1" height="104" src="assets/examples/ssv2/1-observation.webp" width="104">
           <figcaption>
            <span class="frame-notation">
             O
@@ -459,7 +455,7 @@
           </figcaption>
          </figure>
          <figure>
-          <img alt="Reconstruction of current frame, SSv2 example 1" height="104" src="assets/ssv2-1-1.webp" width="103">
+          <img alt="Reconstruction of current frame, SSv2 example 1" height="104" src="assets/examples/ssv2/1-reconstruction.webp" width="103">
           <figcaption>
            <span class="frame-notation">
             R
@@ -471,7 +467,7 @@
           </figcaption>
          </figure>
          <figure>
-          <img alt="Next observed frame, SSv2 example 1" height="104" src="assets/ssv2-1-2.webp" width="104">
+          <img alt="Next observed frame, SSv2 example 1" height="104" src="assets/examples/ssv2/1-next-observation.webp" width="104">
           <figcaption>
            <span class="frame-notation">
             O
@@ -483,7 +479,7 @@
           </figcaption>
          </figure>
          <figure>
-          <img alt="Reconstruction of next frame, SSv2 example 1" height="104" src="assets/ssv2-1-3.webp" width="104">
+          <img alt="Reconstruction of next frame, SSv2 example 1" height="104" src="assets/examples/ssv2/1-next-reconstruction.webp" width="104">
           <figcaption>
            <span class="frame-notation">
             R
@@ -498,7 +494,7 @@
           <span class="prediction-badge">
            OURS
           </span>
-          <img alt="World model prediction, SSv2 example 1" height="104" src="assets/ssv2-1-4.webp" width="104">
+          <img alt="World model prediction, SSv2 example 1" height="104" src="assets/examples/ssv2/1-prediction.webp" width="104">
           <figcaption>
            <span class="frame-notation">
             &Ocirc;
@@ -716,8 +712,8 @@
       </p>
      </div>
      <figure>
-      <a aria-label="Enlarge in-domain adaptation results" class="figure-link adaptation-figure" data-caption="In-domain fine-tuning: current frame, next frame, reconstruction, pretrained model, training from scratch, and fine-tuned model." data-lightbox href="assets/in_domain_ft.png">
-       <img alt="Four robot examples comparing observed frames and predictions. The fine-tuned model produces clearer predictions than the unadapted pretrained model." height="680" loading="lazy" src="assets/in_domain_ft.webp" width="877">
+      <a aria-label="Enlarge in-domain adaptation results" class="figure-link adaptation-figure" data-caption="In-domain fine-tuning: current frame, next frame, reconstruction, pretrained model, training from scratch, and fine-tuned model." data-lightbox href="assets/figures/in_domain_ft.png">
+       <img alt="Four robot examples comparing observed frames and predictions. The fine-tuned model produces clearer predictions than the unadapted pretrained model." height="680" loading="lazy" src="assets/figures/in_domain_ft.webp" width="877">
        <span class="expand-hint">
         <svg class="icon">
          <use href="#i-expand">
@@ -775,8 +771,8 @@
       </p>
      </div>
      <figure>
-      <a aria-label="Enlarge action-conditioned adaptation results" class="figure-link adaptation-figure action-figure" data-caption="Action-conditioned adaptation in Robosuite. RLA is reconstruction with latent actions; RGT uses ground-truth environment actions. Insets enlarge the gripper." data-lightbox href="assets/action_ft.png">
-       <img alt="Three Robosuite robot examples with enlarged gripper regions, comparing observations and predictions conditioned on latent actions or ground-truth actions." height="732" loading="lazy" src="assets/action_ft.webp" width="617">
+      <a aria-label="Enlarge action-conditioned adaptation results" class="figure-link adaptation-figure action-figure" data-caption="Action-conditioned adaptation in Robosuite. RLA is reconstruction with latent actions; RGT uses ground-truth environment actions. Insets enlarge the gripper." data-lightbox href="assets/figures/action_ft.png">
+       <img alt="Three Robosuite robot examples with enlarged gripper regions, comparing observations and predictions conditioned on latent actions or ground-truth actions." height="732" loading="lazy" src="assets/figures/action_ft.webp" width="617">
        <span class="expand-hint">
         <svg class="icon">
          <use href="#i-expand">
@@ -832,7 +828,7 @@
        If you find this research useful, please cite the paper.
       </p>
      </div>
-     <a class="text-link" href="assets/paper.pdf" rel="noopener" target="_blank">
+     <a class="text-link" href="assets/documents/paper.pdf" rel="noopener" target="_blank">
       Download paper
       <svg class="icon">
        <use href="#i-diag">

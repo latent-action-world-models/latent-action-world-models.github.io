@@ -1,60 +1,75 @@
-# Universal World Model project website
+# UWM 项目网站
 
-Academic project page for **A Universal World Model Learned from Large Scale and Diverse Videos**, by Hanchen Cui and Yang Gao. Its typography, hero, section layout, and export workflow follow the local `~/projects/PILOT_website` reference.
+**A Universal World Model Learned from Large Scale and Diverse Videos** — Hanchen Cui、Yang Gao。
 
-The website uses plain HTML, CSS, and JavaScript, with local fonts and assets. No package installation or build step is required.
+网站使用原生 HTML、CSS 和 JavaScript，字体与素材均保存在本地，无需安装依赖或构建。
 
-## Structure
+## 预览
 
-```text
-index.html                 Website entry point
-favicon.ico                Browser icon fallback, with 16px and 32px frames
-assets/                    Paper, figures, fonts, styles, and JavaScript
-scripts/check_site.py      Resource and link validation
-scripts/export_site.py     Website-only export
-.nojekyll                  GitHub Pages static serving
-build/site/                Generated deployment directory
-build/uwm-website.zip       Generated portable website
-project-site/              Companion private Sites deployment checkout
-reference/                 Extracted source material, retained locally
-qa/                        Browser screenshots, retained locally
-```
-
-The original PDF and ZIP remain in the workspace. They are excluded from the website export; the published paper is an exact copy at `assets/paper.pdf`.
-
-## Preview
-
-Run from this directory:
+在项目根目录运行：
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open `http://localhost:8000`. The page also supports direct opening of `index.html`; a local server provides better clipboard support.
+打开 <http://localhost:8000>。也可以直接打开 `index.html`；通过本地服务器预览可获得更好的剪贴板支持。
 
-## Validate and export
+## 目录
+
+```text
+index.html                 页面内容与入口
+favicon.ico                浏览器图标的根路径回退
+assets/
+  style.css                按页面区域组织的样式与响应式规则
+  main.js                  按功能拆分的交互初始化函数
+  figures/                 论文图表：WebP 展示图、PNG 原图
+  examples/ssv2/           Something-Something-v2 的 5 组实验帧
+  examples/ego4d/          Ego4D 的 5 组实验帧
+  documents/               论文 PDF、海报 PNG
+  icons/                   透明项目图标、16px/32px favicon
+  fonts/                   使用中的本地字体及许可证
+  README.md                素材来源与命名说明
+scripts/
+  check_site.py            本地链接、资源与论文校验
+  export_site.py           校验并导出独立网站
+  README.md                脚本使用说明
+
+docs/content-notes.md      内容来源与数值口径
+.nojekyll                  GitHub Pages 配置
+
+# 以下目录仅保留在本地，不进入 Git 或网站导出包
+local/inputs/              用户提供的原始 PDF、ZIP、海报和图标
+local/reference/           解压后的论文资料与参考网页
+local/unused-assets/       归档的旧图标、未使用字体
+build/site/                生成的可部署网站
+build/uwm-website.zip       生成的独立网站压缩包
+build/previews/            浏览器检查截图
+build/archives/            整理前的导出包
+build/deploy/              Sites 部署归档
+project-site/              已有的私有 Sites 部署仓库
+```
+
+根目录是网站的源文件，`build/site/` 和 `project-site/dist/` 是生成或同步的副本。日常修改请在根目录进行。
+
+## 修改内容
+
+- 文案、作者链接、论文与海报链接、表格、BibTeX：`index.html`。
+- 字体、颜色、布局与移动端样式：`assets/style.css`。
+- 摘要展开、实验切换、图片弹窗、复制引用、导航状态：`assets/main.js` 中对应的 `init…` 函数。
+- 替换素材时同步更新 HTML 或 JavaScript 中的路径。实验帧按“样例编号－帧类型”命名，见 [素材说明](assets/README.md)。
+
+摘要与完整论文图表在 JavaScript 不可用时仍然可读。网站支持部署在域名根目录或子路径。
+
+## 检查与导出
 
 ```bash
 python3 scripts/check_site.py
 python3 scripts/export_site.py
+python3 scripts/check_site.py build/site
 ```
 
-Upload the contents of `build/site/` to GitHub Pages or any static host, or upload `index.html`, `.nojekyll`, `favicon.ico`, and `assets/` directly. Relative paths work under a repository subpath. `build/uwm-website.zip` contains only the website, with `index.html` at the archive root.
+导出脚本先检查源文件，再检查临时生成的网站，通过后替换 `build/site/` 和 `build/uwm-website.zip`。压缩包的根目录就是 `index.html`，仅包含网站运行所需的文件。
 
-## Content and editing
+部署到 GitHub Pages 或静态托管服务时，上传 `build/site/` 的内容。脚本的检查范围及编辑后的手工验证步骤见 [scripts/README.md](scripts/README.md)。
 
-- `index.html`: title, authors, affiliations, manuscript abstract, full paper figures, quantitative table, and BibTeX.
-- `assets/style.css`: Noto Sans typography, continuous paper title, soft gradient hero, dark resource buttons, metric and contribution cards, centered section headings, and responsive layouts. Desktop copy follows PILOT at 22px or larger; mobile body text is 20px.
-- `assets/main.js`: abstract expansion, dataset and example selection, image dialogs, navigation state, and citation copying.
-- `assets/fonts/`: Noto Sans font files and their SIL Open Font License, copied from the supplied local reference.
-- `assets/uwm-icon-transparent.png`: Transparent-background cutout of the supplied globe, used for the header and touch icon. The original remains in `image.png` and `assets/uwm-icon.png`; the built-in imagegen prompt is recorded in `local/inputs/icon-background-removal.md`.
-- `assets/uwm-favicon-16.png`, `assets/uwm-favicon-32.png`, and `favicon.ico`: Dedicated browser-tab icons using the same globe. The PNG frames are the exact 16px/32px bitmaps rendered by Chromium from the supplied transparent icon; the ICO packages those frames without changing them. Distinct URLs refresh previously cached default icons.
-- `assets/uwm-poster.png`: Exact copy of the supplied `A Universal World Model .png` poster, opened at full resolution from the homepage's Poster button.
-
-The full method and video-result figures appear in the main narrative. The optional individual-example explorer shows all ten paper examples with Table 1 LPIPS values. Both the full abstract and the complete paper figures remain readable without JavaScript. Wide video-result figures and example frames scroll horizontally on mobile; figure dialogs link to original images.
-
-The homepage duration highlights show **>200 h of in-the-wild video data**, using the project owner's requested lower-bound presentation, and **approximately 1.7 min of robotic data for adaptation**. The latter uses the project owner's stated 20 Hz collection rate: 2,000 consecutive frame-pair transitions ÷ 20 per second = 100 seconds = 1.67 minutes. These are video-data durations. For reference, the [official Ego4D project](https://ego4d-data.org/) reports 3,670 hours for its source dataset; the headline does not assert a combined dataset duration or a measured training runtime.
-
-Authors and affiliations follow the PDF rather than the LaTeX template placeholders. The 2,000-frame-pair result is the paper's qualitative domain-adaptation result. The Code button links to the author-provided repository at `https://github.com/morning-star-7/Latent-action-world-models`. No arXiv link or live model demo is asserted. The displayed and copied citation reproduce the author-provided `@inproceedings{cui2023universal}` entry for the NeurIPS 2023 Foundation Models for Decision Making Workshop.
-
-PILOT is a visual and structural reference. All research claims, figures, and numerical results on this site belong to the supplied UWM manuscript.
+页面布局参考 [DreamSteer](https://dream-steer.github.io/) 与本地 `~/projects/PILOT_website`；页脚保留 DreamSteer 的布局署名。

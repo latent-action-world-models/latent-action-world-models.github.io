@@ -1,14 +1,17 @@
-build/
-qa/
-reference/
-local/
-project-site/
+# Generated releases, screenshots, and deployment mirror
+/build/
+/project-site/
+
+# Original inputs, research references, and unused assets
+/local/
 *.zip
 *.tar.gz
 13_A_Universal_World_Model_Lea*.pdf
+/image.png
+/A Universal World Model .png
+
+# Local caches and agent configuration
 __pycache__/
 .agents/
 .aws/
 .codex/
-/image.png
-/A Universal World Model .png
