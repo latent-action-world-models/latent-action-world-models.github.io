@@ -4,7 +4,7 @@ The supplied manuscript is the source for the title, authors, affiliations, abst
 
 ## Homepage highlights
 
-- **>200 h — In-the-wild video data:** the project owner's requested lower-bound presentation. The context link points to [Ego4D](https://ego4d-data.org/), whose original source dataset is described as 3,670 hours. The headline does not claim a combined duration for Ego4D and Something-Something-v2, a measured duration of the exact training subset, or a training runtime.
+- **>200 h — In-the-wild video data pretraining:** the project owner's requested lower-bound presentation. The supporting text reads “Large-scale, diverse videos” without a link. For source context, [Ego4D](https://ego4d-data.org/)'s original dataset is described as 3,670 hours. The headline does not claim a combined duration for Ego4D and Something-Something-v2, a measured duration of the exact training subset, or a training runtime.
 - **≈1.7 min — Robotic data for adaptation:** 2,000 consecutive frame-pair transitions at the project owner's stated 20 Hz collection rate correspond to 100 seconds, or 1.67 minutes. The frame-pair count comes from the paper's qualitative domain-adaptation result.
 - **0 labels — Action-free pretraining:** latent actions are learned from videos without ground-truth action labels during pretraining.
 
